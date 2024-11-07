@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BlogPage from "../Components/BlogPage";
 const Blogs = () => {
-
   return (
     <div>
       <div className="py-40 bg-black text-center text-white px-4">
@@ -10,7 +9,7 @@ const Blogs = () => {
         </h2>
       </div>
       {/* All blogs container */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[90rem] mx-auto">
         <BlogPage />
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import Pagination from "./Pagination";
+import CategorySelection from "./CategorySelection";
+import SideBar from "./SideBar";
 const BlogPage = () => {
   const [Blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -9,9 +11,7 @@ const BlogPage = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   useEffect(() => {
     async function fetchBlogs() {
-      let url =
-        "http://localhost:5000/blogs?pages=$%7BcurrentPage%7D&limit=$%7BpageSize%7D";
-
+      let url = "http://localhost:5000/blogs";
       //if filter by category
       if (selectedCategory) {
         url += `&category=${selectedCategory}`;
@@ -38,16 +38,29 @@ const BlogPage = () => {
   return (
     <div>
       {/* category section */}
-      <div>Page Category</div>
-
-      {/*  blogCards section*/}
       <div>
-        <BlogCard
-          blogs={Blogs}
-          currentPage={currentPage}
+        <CategorySelection
+          onSelectCategory={handleCategoryChange}
           selectedCategory={selectedCategory}
-          pageSize={pageSize}
+          activeCategory={activeCategory}
         />
+      </div>
+      <div className="flex flex-col lg:flex-row gap-12">
+        {/*  blogCards section*/}
+        <div>
+          {/* blog cards components */}
+          <BlogCard
+            blogs={Blogs}
+            currentPage={currentPage}
+            selectedCategory={selectedCategory}
+            pageSize={pageSize}
+          />
+        </div>
+
+        {/* SideBar section */}
+        <div>
+          <SideBar />
+        </div>
       </div>
 
       {/* pagination section */}
