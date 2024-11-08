@@ -8,9 +8,11 @@ import {
   FaBarsStaggered,
   FaXmark,
 } from "react-icons/fa6";
+import Modal from "./Modal";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,6 +26,14 @@ function Navbar() {
     { path: "/blogs", link: "Blogs" },
     { path: "/contact", link: "Contact" },
   ];
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <header className="bg-black text-white fixed top-0  left-0 right-0">
       <nav className="px-4 py-4 max-w-7xl mx-auto  flex justify-between items-center">
@@ -57,10 +67,16 @@ function Navbar() {
           <a href="/" className="hover:text-orange-500">
             <FaXTwitter />
           </a>
-          <button className="bg-orange-500 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200">
+          <button
+            onClick={openModal}
+            className="bg-orange-500 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200 cursor-pointer"
+          >
             Log in
           </button>
         </div>
+
+        {/* Our Modal Component is here */}
+        <Modal isOpen={isModalOpen} onClose={closeModal} />
 
         {/* {mobile menu btn, display mobile screen} */}
         <div className="md:hidden">

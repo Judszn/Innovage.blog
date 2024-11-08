@@ -6,7 +6,7 @@ function Home() {
     <div>
       <Banner />
 
-      <div className="max-w-[100rem] mx-auto">
+      <div className="max-w-[90rem] mx-auto">
         <BlogPage />
       </div>
     </div>
