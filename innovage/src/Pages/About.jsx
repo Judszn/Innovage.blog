@@ -12,7 +12,7 @@ function About() {
         </h2>
       </div>
       <div className="max-w-5xl mx-auto pl-20  pb-40">
-        <div className="grid m-4 lg:grid-cols-2 items-center justify-center mb-20  border-l border-orange-500 pl-20 ">
+        <div className="grid m-4 lg:grid-cols-2 items-center justify-center mb-20  border-l-2 border-orange-500 pl-20 ">
           <div className="">
             <img
               src={image1}
@@ -31,7 +31,7 @@ function About() {
             </p>
           </div>
         </div>
-        <div className=" m-4 grid lg:grid-cols-2 items-center justify-center mb-20  pl-20 border-l border-orange-500">
+        <div className=" m-4 grid lg:grid-cols-2 items-center justify-center mb-20  pl-20 border-l-2 border-orange-500">
           <div className="">
             <img
               src={image3}
@@ -50,7 +50,7 @@ function About() {
             </p>
           </div>
         </div>
-        <div className="m-4 grid lg:grid-cols-2 items-center justify-center border-l border-orange-500  pl-20 pb-3">
+        <div className="m-4 grid lg:grid-cols-2 items-center justify-center border-l-2 border-orange-500  pl-20 pb-3">
           <div className="">
             <img
               src={image2}

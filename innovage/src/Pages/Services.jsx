@@ -19,8 +19,8 @@ function Services() {
           Services
         </h2>
       </div>
-      <div className="max-w-5xl flex items-center justify-center mx-auto pb-[300px]">
-        <ul className="grid lg:grid-cols-3  items-center gap-x-5 gap-y-5">
+      <div className="max-w-5xl flex items-center justify-center mx-auto lg:pb-[300px] pb-10">
+        <ul className="grid sm:grid-cols-2 w-full m-5 md:grid-cols-2 lg:grid-cols-3  items-center gap-x-5 gap-y-5">
           <li className="inline-flex items-center border-2 border-gray-50 border-opacity-5 rounded-md py-6 bg-gray-800 text-2xl cursor-pointer hover:text-violet-600 px-3">
             <FaRegPenToSquare className="mr-3" />
             Copy Writing
