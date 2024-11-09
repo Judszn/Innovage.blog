@@ -43,7 +43,7 @@ function Modal({ isOpen, onClose }) {
                 Login
               </button>
               <button className="hover:shadow-md rounded-md bg-gray-400 ml-2 hover:bg-white hover:text-green-500 py-3 px-8 text-base font-semibold text-white outline-none">
-                Login
+                Sign Up
               </button>
             </div>
           </form>
