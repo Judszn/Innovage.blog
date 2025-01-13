@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  font-family: "poppins", sans-serif;
+}
 
 .active {
   @apply text-orange-500 underline-offset-4;
