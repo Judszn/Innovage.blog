@@ -16,7 +16,7 @@ function Banner() {
       >
         <div className="absolute">
           <h1 className="text-5xl lg:text-7xl loading-snug font-bold mb-5 text-orange-500 ">
-            Welcome to Innovage
+            Welcome to Innovage-+
           </h1>
           <p className="text-gray-100 lg:w-3/5 mx-auto mb-5 font-primary">
             Start your blog today and join a community of writers and readers
